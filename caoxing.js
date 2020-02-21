@@ -1,17 +1,14 @@
-# 学习通视频播放脚本
-
-适用于Windows操作系统，部分浏览器可能存在各种玄学原因导致无法使用，你可以在阅读完本片段原理后尝试自己编写
-
-----
-
-苦于超星播放器一开鼠标会停止播放，所以写了这样的一个脚本，用于更安心的学习！
-
-## 使用方法：
-
-你可以将该脚本的核心片段放于浏览器调试控制台执行，也可以复制整个代码添加到油猴脚本中运行！
-该方法较为简单，简单阅读代码即可明白原理！下面是核心代码片段：
-
-```
+// ==UserScript==
+// @name         超星助手-视频静音播放
+// @namespace    https://github.com/npsc-tx/xuexitong-chaoxing
+// @version      0.1
+// @description  视频静音以及自动播放
+// @author       天析
+// @match        https://mooc1-1.chaoxing.com/*
+// @grant        none
+// ==/UserScript==
+(function() {
+    'use strict';
     //核心片段开始
     setInterval(function () {
         //读取视频
@@ -41,4 +38,4 @@
         }
     }, 100);
     //核心片段结束
-```
+})();
